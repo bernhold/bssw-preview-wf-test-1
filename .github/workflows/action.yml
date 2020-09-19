@@ -1,6 +1,8 @@
-name: learn-github-actions
-on: pull_request
-types: [opened, synchronize]  
+name: testing-gh-actions
+on: 
+  workflow_dispatch: # On click
+  pull_request:
+    types: [opened, synchronize]  
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
