@@ -1,13 +1,18 @@
-name: testing-gh-actions
+name: Sync pull request to preview
 on: 
   workflow_dispatch: # On click
   pull_request:
     types: [opened, synchronize]  
 jobs:
-  check-bats-version:
+  syncpr:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo GITHUB_REPOSITORY = ${{github.repository}}
-          echo GITHUB_SHA = ${{github.sha}}
-          echo GITHUB_REF = ${{github.ref}}
+      - uses: actions/checkout@preview
+
+      - name: Merge pr -> preview
+        uses: devmasx/merge-branch@v1.3.0
+        with:
+          type: now
+          head_to_merge: ${{ github.ref }}
+          target_branch: preview
+          github_token: ${{ secrets.GITHUB_TOKEN }}
