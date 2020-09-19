@@ -7,7 +7,7 @@ jobs:
   syncpr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@preview
+      - uses: actions/checkout@master
 
       - name: Merge pr -> preview
         uses: devmasx/merge-branch@v1.3.0
