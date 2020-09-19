@@ -1,0 +1,13 @@
+name: testing-gh-actions
+on: 
+  workflow_dispatch: # On click
+  pull_request:
+    types: [opened, synchronize]  
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo GITHUB_REPOSITORY = ${{github.repository}}
+          echo GITHUB_SHA = ${{github.sha}}
+          echo GITHUB_REF = ${{github.ref}}
