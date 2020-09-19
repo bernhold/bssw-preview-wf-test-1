@@ -1,7 +1,7 @@
 name: Sync pull request to preview
 on: 
   workflow_dispatch: # On click
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize]  
 jobs:
   syncpr:
