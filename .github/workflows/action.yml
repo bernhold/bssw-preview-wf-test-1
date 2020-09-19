@@ -1,0 +1,9 @@
+name: learn-github-actions
+on: pull_request
+  types: [opened, synchronized]  
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo GITHUB_SHA = $GITHUB_SHA
+      - run: echo GITHUB_REF = $GITHUB_REF
