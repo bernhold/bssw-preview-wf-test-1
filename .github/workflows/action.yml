@@ -1,13 +1,14 @@
 name: Sync pull request to preview
 on: 
   workflow_dispatch: # On click
-  pull_request_target:
+  pull_request:
     types: [opened, synchronize]  
 jobs:
   syncpr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+        ref: preview
 
       - name: Merge pr -> preview
         uses: devmasx/merge-branch@v1.3.0
