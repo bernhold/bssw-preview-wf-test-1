@@ -15,4 +15,4 @@ jobs:
           type: now
           from_branch: master
           target_branch: preview
-          github_token: ${{ github.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
