@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo GITHUB_REPOSITORY = ${{GITHUB_REPOSITORY}}
-          echo GITHUB_SHA = ${{GITHUB_SHA}}
-          echo GITHUB_REF = ${{GITHUB_REF}}
+          echo GITHUB_REPOSITORY = ${{github.repository}}
+          echo GITHUB_SHA = ${{github.sha}}
+          echo GITHUB_REF = ${{github.ref}}
