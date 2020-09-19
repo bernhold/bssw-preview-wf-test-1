@@ -1,6 +1,6 @@
 name: learn-github-actions
 on: pull_request
-  types: [opened, synchronized]  
+    types: [opened, synchronize]  
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
