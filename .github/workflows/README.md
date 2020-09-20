@@ -8,6 +8,7 @@ Format:
     - jobname
         - description
 
+# Workflows in use
 * merge-master-to-preview.yml (Sync master to preview)
     - trigger: push to master branch
     - job: sync-preview
@@ -20,6 +21,15 @@ Format:
     - trigger: pull request [opened, reopened] on preview branch
     - job: reject-pr
         - Attempts to open a PR against the preview branch are immediately closed and an explanatory comment is added to the PR.
+
+# Gaps
+* PR is closed without merge.  We should back out the whole PR from preview.
+* Recreate preview branch.  Trigger manually
+    - Delete preview
+    - Create preview from master
+    - Foreach open PR
+        - Merge PR to preview
+* Have not investigated possibilities for conflicts and how they should be handled.
 
 # Potentially useful actions
 * ljharb/require-allow-edits
