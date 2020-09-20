@@ -1,8 +1,8 @@
 name: Dump context
-on: 
-  workflow_dispatch: # On click
-  pull_request_target:
-    types: [opened, synchronize]  
+#on: 
+#  workflow_dispatch: # On click
+#  pull_request_target:
+#    types: [opened, synchronize]  
 jobs:
   execution-context:
     runs-on: ubuntu-latest
