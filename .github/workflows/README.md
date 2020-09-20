@@ -12,7 +12,7 @@ Format:
 * merge-master-to-preview.yml (Sync master to preview)
     - trigger: push to master branch
     - job: sync-preview
-        -Merges from master into preview branch.
+        - Merges from master into preview branch.
 * merge-pr-to-preview.yml (Sync pull request to preview)
     - trigger: pull request [opened, synchronized] on master branch
     - job: sync-pull-request
