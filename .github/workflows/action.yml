@@ -2,7 +2,8 @@ name: Sync pull request to preview
 on: 
   workflow_dispatch: # On click
   pull_request_target:
-    types: [opened, synchronize]  
+    types: [opened, synchronize]
+    branches: [main]  
 jobs:
   syncpr:
     runs-on: ubuntu-latest
