@@ -1,7 +1,7 @@
 name: Dump context
 on: 
   workflow_dispatch: # On click
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize]  
 jobs:
   execution-context:
