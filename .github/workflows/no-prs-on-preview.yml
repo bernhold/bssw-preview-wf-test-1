@@ -10,7 +10,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - uses: superbrothers/close-pull-request@v2
+    - uses: bernhold/close-pull-request@main
       with:
         # Optional. Post a issue comment just before closing a pull request.
         comment: "The preview branch does not accept pull requests.  You probably want to use master."
