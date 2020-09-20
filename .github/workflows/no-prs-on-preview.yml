@@ -10,7 +10,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: SiliconLabs/close-pull-request-target
+      - uses: SiliconLabs/close-pull-request-target@v2.2
       with:
         # Optional. Post a issue comment just before closing a pull request.
         comment: "Preview branch does not accept pull requests.  You probably want to use master."
