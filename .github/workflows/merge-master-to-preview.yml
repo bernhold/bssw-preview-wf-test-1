@@ -1,4 +1,6 @@
 name: Sync master to preview
+
+# When there's a push on master, we want to reflect it on preview too.
 on:
   push:
     branches:
