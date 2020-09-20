@@ -3,11 +3,18 @@ on:
   pull_request_target:
     types: [opened, synchronize]
 jobs:
-  syncpr:
+  execution-context:
     runs-on: ubuntu-latest
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+          
+syncpr:
+  runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@master
-
       - name: Merge pr -> preview
         uses: devmasx/merge-branch@v1.3.0
         with:
