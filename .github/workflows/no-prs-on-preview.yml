@@ -10,9 +10,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - uses: bernhold/close-pull-request@main
-      with:
-        # Optional. Post a issue comment just before closing a pull request.
-        comment: "The preview branch does not accept pull requests.  You probably want to use master."
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: codelytv/no-pull-requests@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          message: The preview branch does not accept pull requests.  You probably want to use master.
