@@ -30,6 +30,12 @@ Format:
     - Foreach open PR
         - Merge PR to preview
 * Have not investigated possibilities for conflicts and how they should be handled.
+* Quality checks on content
+    - verify links
+    - check spelling
+    - markdown lint (are we too different for this to be useful?)
+    - BSSw required elements
+    - BSSw style
 
 # Potentially useful actions
 * ljharb/require-allow-edits
