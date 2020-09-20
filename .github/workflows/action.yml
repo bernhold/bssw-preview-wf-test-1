@@ -2,14 +2,16 @@ name: Sync pull request to preview
 on:
   pull_request_target:
     types: [opened, synchronize]
+    branches:
+      - master
 jobs:
-  execution-context:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+#  execution-context:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Dump GitHub context
+#        env:
+#          GITHUB_CONTEXT: ${{ toJson(github) }}
+#        run: echo "$GITHUB_CONTEXT"
 
   syncpr:
     runs-on: ubuntu-latest
