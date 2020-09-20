@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: SiliconLabs/close-pull-request-target@v2.2
       with:
-        comment: "This repo does not accept PRs. The code in this repository is provided as-is, and questions related to this repo will not be supported. If you have a general question for Silicon Labs, visit www.silabs.com/support for assistance."
+        comment: "The preview branch does not accept pull requests.  To contribute to BSSw.io make your PR against the master branch.  Thanks"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
