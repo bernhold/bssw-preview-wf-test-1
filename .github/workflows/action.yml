@@ -16,6 +16,6 @@ jobs:
         uses: devmasx/merge-branch@v1.3.0
         with:
           type: now
-          head_to_merge: ${{ github.ref }}
+          head_to_merge: ${{ github.event.pull_request.head.sha }}
           target_branch: preview
           github_token: ${{ secrets.GITHUB_TOKEN }}
