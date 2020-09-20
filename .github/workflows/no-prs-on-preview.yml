@@ -10,7 +10,9 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: codelytv/no-pull-requests@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          message: The preview branch does not accept pull requests.  You probably want to use master.
+      - uses: SiliconLabs/close-pull-request-target
+      with:
+        # Optional. Post a issue comment just before closing a pull request.
+        comment: "Preview branch does not accept pull requests.  You probably want to use master."
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
