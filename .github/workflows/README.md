@@ -35,6 +35,7 @@ Format:
     - check spelling
     - markdown lint (are we too different for this to be useful?)
     - BSSw required elements
+    - verify BSSw metadata
     - BSSw style
 
 # Potentially useful actions
