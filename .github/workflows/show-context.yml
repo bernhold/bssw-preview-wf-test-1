@@ -1,13 +1,13 @@
-name: Dump context
-on: 
-  workflow_dispatch: # On click
-  pull_request_target:
-    types: [opened, synchronize]  
-jobs:
-  execution-context:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Dump GitHub context
-          env:
-            GITHUB_CONTEXT: ${{ toJson(github) }}
-          run: echo "$GITHUB_CONTEXT"
+#name: Dump context
+#on: 
+#  workflow_dispatch: # On click
+#  pull_request_target:
+#    types: [opened, synchronize]  
+#jobs:
+#  execution-context:
+#    runs-on: ubuntu-latest
+#    steps:
+#        - name: Dump GitHub context
+#          env:
+#            GITHUB_CONTEXT: ${{ toJson(github) }}
+#          run: echo "$GITHUB_CONTEXT"
