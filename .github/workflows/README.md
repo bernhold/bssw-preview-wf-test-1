@@ -23,7 +23,7 @@ Format:
         - Attempts to open a PR against the preview branch are immediately closed and an explanatory comment is added to the PR.
 
 # Gaps
-* PR is closed without merge.  We should back out the whole PR from preview.
+* PR is closed without merge.  We should back out the whole PR from preview?  Or kill and recreate preview?
 * Recreate preview branch.  Trigger manually
     - Delete preview
     - Create preview from master
@@ -37,6 +37,9 @@ Format:
     - BSSw required elements
     - verify BSSw metadata
     - BSSw style
+ * Generate list of articles published via CHANGELOG-like mechanisms
+    - Log of what is published when for reporting purposes
+    - Pick out new things for the monthly digest.
 
 # Potentially useful actions
 * ljharb/require-allow-edits
@@ -45,3 +48,7 @@ Format:
     - On push, check all outstanding PRs for merge conflicts.  Add label and comment.
 * outsideris/potential-conflicts-checker-action
     - On PR update, compare against all outstanding PRs for possible conflicts and add comments
+* dawidd6/action-delete-branch
+    - Delete a branch, i.e. to recreate preview
+* peterjgrainger/action-create-branch
+    - Create a branch, i.e. to recreate preview
