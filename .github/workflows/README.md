@@ -40,6 +40,7 @@ Format:
  * Generate list of articles published via CHANGELOG-like mechanisms
     - Log of what is published when for reporting purposes
     - Pick out new things for the monthly digest.
+ * Article title collisions cause problems in the backend.  It would be nice to be able to detect them and warn.
 
 # Potentially useful actions
 * ljharb/require-allow-edits
