@@ -41,6 +41,7 @@ Format:
     - Log of what is published when for reporting purposes
     - Pick out new things for the monthly digest.
  * Article title collisions cause problems in the backend.  It would be nice to be able to detect them and warn.
+    - Any articles with the same title, regardless of path and (I think) regardless of their publication state cause problems.
 
 # Potentially useful actions
 * ljharb/require-allow-edits
