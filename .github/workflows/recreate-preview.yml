@@ -1,0 +1,13 @@
+name: Recreate preview brand from scratch
+on:
+  workflow_dispatch
+  
+jobs:
+recreate-preview-branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete old preview
+      - uses: dawidd6/action-delete-branch@v3
+        with:
+          branches: preview
+          github_token: ${{ secrets.GITHUB_TOKEN }}
