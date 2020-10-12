@@ -3,7 +3,7 @@ on:
   workflow_dispatch
   
 jobs:
-recreate-preview-branch
+  recreate-preview-branch
     runs-on: ubuntu-latest
     steps:
       - name: Delete old preview
