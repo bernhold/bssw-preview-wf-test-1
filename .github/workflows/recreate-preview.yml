@@ -21,7 +21,7 @@ jobs:
       - name: Trigger open PRs to synchronize
         uses: yellowmegaman/prtrigger@v0.8
         with:
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "your default commit message for trigger"
           git_user: "serviceaccount"
           git_email: "serviceaccount@org.io"
