@@ -7,8 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Delete old preview
+      - name: Delete old preview branch
         uses: dawidd6/action-delete-branch@v3
         with:
           branches: preview
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create new preview branch
+        uses: peterjgrainger/action-create-branch@v1.0.0
+        with:
+          branch: 'preview'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
