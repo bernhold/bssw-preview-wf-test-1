@@ -18,7 +18,14 @@ jobs:
           branch: 'preview'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Trigger open PRs to synchronize
-        uses: yellowmegaman/prtrigger@v0.8
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: List open pull requests
+        uses: buildsville/list-pull-requests@v1
+        id: list
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+      - name: output
+        run: echo '${{ steps.list.outputs.pulls }}'
+#      - name: Trigger open PRs to synchronize
+#        uses: yellowmegaman/prtrigger@v0.8
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
