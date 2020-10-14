@@ -19,10 +19,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: List open pull requests
-        uses: buildsville/list-pull-requests@v1
-        id: list
+      - uses: k-kinzal/pr-action/validate@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
+          args: -l "state == `\"open\"`"
       - name: output
         run: echo '${{ steps.list.outputs.pulls }}'
 #      - name: Trigger open PRs to synchronize
