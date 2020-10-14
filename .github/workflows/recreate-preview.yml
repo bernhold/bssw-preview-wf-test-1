@@ -21,7 +21,7 @@ jobs:
       - name: List open pull requests
         uses: k-kinzal/pr-action/validate@master
         with:
-          args: -l "state == `\"open\"`" -l "head.[sha]"
+          args: -l "state == `\"open\"`" -l "{url}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
