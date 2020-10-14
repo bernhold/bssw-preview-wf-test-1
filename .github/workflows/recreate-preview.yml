@@ -19,7 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: List open pull requests
-        uses: k-kinzal/pr-action/validate@master
+        uses: k-kinzal/pr-action/show@master
         with:
           args: -l "head[*].sha"
 #          args: -l "state == `\"open\"`" -l "head[*].sha"
