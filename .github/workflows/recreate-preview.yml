@@ -37,6 +37,7 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
+      - uses: actions/checkout@master
       - uses: devmasx/merge-branch@v1.3.0
         with:
           type: now
