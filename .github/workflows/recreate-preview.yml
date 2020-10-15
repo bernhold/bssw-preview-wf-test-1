@@ -3,6 +3,15 @@ on:
   workflow_dispatch
   
 jobs:
+  find-open-pull-requests:
+    runs-on: ubuntu-latest
+  steps:
+    - name: List open pull requests
+      uses: k-kinzal/pr-action/show@master
+      with:
+      args: -l "state == `\"open\"`"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   recreate-preview-branch:
     runs-on: ubuntu-latest
     steps:
@@ -18,17 +27,19 @@ jobs:
           branch: 'preview'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: List open pull requests
-        uses: k-kinzal/pr-action/show@master
-        with:
-          args: -l "state == `\"open\"`"
-#          args: -l "state == `\"open\"`" -l "head[*].sha"
+  merge-pull-requests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        head_shas: ["e5fb16319aa0a639fd925c90a2242dff106772fb", "61d1bf23aba73b2d1dbdec58ca89c50f065c5e20"]
+    steps:
+      - name: Dump matrix context
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
-      - name: output
-        run: echo '${{ steps.list.outputs.pulls }}'
-#      - name: Trigger open PRs to synchronize
-#        uses: yellowmegaman/prtrigger@v0.8
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MATRIX_CONTEXT: ${{ toJson(matrix) }}
+        run: echo "$MATRIX_CONTEXT"
+      - uses: devmasx/merge-branch@v1.3.0
+        with:
+          type: now
+          head_to_merge: ${{ matrix.head_shas }}
+          target_branch: preview
+          github_token: ${{ secrets.GITHUB_TOKEN }}
