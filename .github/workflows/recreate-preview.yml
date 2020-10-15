@@ -5,12 +5,12 @@ on:
 jobs:
   find-open-pull-requests:
     runs-on: ubuntu-latest
-  steps:
-    - name: List open pull requests
-      uses: k-kinzal/pr-action/show@master
-      with:
-        args: -l "state == `\"open\"`"
-      env:
+    steps:
+      - name: List open pull requests
+        uses: k-kinzal/pr-action/show@master
+        with:
+          args: -l "state == `\"open\"`"
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   recreate-preview-branch:
     runs-on: ubuntu-latest
