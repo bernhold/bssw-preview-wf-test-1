@@ -8,6 +8,9 @@ jobs:
   sync-pull-request:
     runs-on: ubuntu-latest
     steps:
+      - name: Dump github context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
       - uses: actions/checkout@master
       - name: Merge pr -> preview
         uses: devmasx/merge-branch@v1.3.0
