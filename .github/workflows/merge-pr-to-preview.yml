@@ -11,7 +11,7 @@ jobs:
       - name: Dump github context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$MATRIX_CONTEXT"  
+        run: echo "$GITHUB_CONTEXT"  
       - uses: actions/checkout@master
       - name: Merge pr -> preview
         uses: devmasx/merge-branch@v1.3.0
