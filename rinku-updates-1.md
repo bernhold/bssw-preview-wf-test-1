@@ -11,3 +11,4 @@ Learn the word hello in different languages
 7.	Bengali	hyālō	: Bangladesh, West Bengal (India), Tripura (India), Assam (India)
 8.	Russian	privet	: Russia, former Republics of the Soviet Union, Mongolia
 9.	Japanese kon’nichiwa : Japan
+10. Southern howdy : Southern United States
