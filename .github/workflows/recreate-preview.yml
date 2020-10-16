@@ -48,3 +48,4 @@ jobs:
           head_to_merge: ${{ matrix.head_shas }}
           target_branch: preview
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
