@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        head_shas: ["e5fb16319aa0a639fd925c90a2242dff106772fb", "61d1bf23aba73b2d1dbdec58ca89c50f065c5e20"]
+        head_shas: ["725515fa633ce99e0bfa4d64349cb3657e747791", "71b58e1fe10b5447942fa332816be43641aa8d52", "e5fb16319aa0a639fd925c90a2242dff106772fb", "61d1bf23aba73b2d1dbdec58ca89c50f065c5e20"]
     steps:
       - name: Dump matrix context
         env:
