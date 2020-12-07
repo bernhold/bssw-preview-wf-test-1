@@ -12,3 +12,4 @@ Learn the word hello in different languages
 8.	Russian	privet	: Russia, former Republics of the Soviet Union, Mongolia
 9.	Japanese kon’nichiwa : Japan
 10. Southern howdy : Southern United States
+11. Friendly hi : everywhere
