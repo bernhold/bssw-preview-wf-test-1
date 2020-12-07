@@ -46,6 +46,5 @@ jobs:
         with:
           type: now
           head_to_merge: ${{ matrix.head_shas }}
-          from_branch: davidbernholdt:master
           target_branch: preview
           github_token: ${{ secrets.GITHUB_TOKEN }}
