@@ -27,7 +27,15 @@ jobs:
           branch: 'preview'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  merge-pull-requests:
+  trigger-pr-updates:  
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: pull-request
+        uses: yellowmegaman/prtrigger@v0.8
+        with:
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+merge-pull-requests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
