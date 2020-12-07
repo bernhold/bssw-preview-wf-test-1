@@ -35,7 +35,7 @@ jobs:
         uses: yellowmegaman/prtrigger@v0.8
         with:
           github_token: ${{ secrets.PERSONAL_TOKEN }}
-merge-pull-requests:
+  merge-pull-requests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
